@@ -1,0 +1,342 @@
+{% extends "base.html" %}
+{% block title %} Home {% endblock title %}
+{% block body %}
+{% load static %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-Gn53820T6HtQZ8uq5w0E4mU8tYc8EGwOG5Er9vrReI1M8RgJjTp1I8C47ODp6N9g9tF5vgA16ZtRv1U9THX6Nw==" crossorigin="anonymous" />
+<script src="https://kit.fontawesome.com/b3aed9cb07.js" crossorigin="anonymous"></script>
+
+
+<style>
+  #footer{
+    text-align: center;
+    background-color: #292b2c;
+    color: #fff;
+    padding-top: 1%;
+    padding-bottom: 0%;
+  }
+  #footer li {
+    margin-right: 50px; /* Adjust the spacing between icons */
+  }
+</style>
+
+<div class="container-fluid px-0">
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://source.unsplash.com/1600x600/?icecream,water" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h3 style="color: pink;">Welcome to the best Ice cream of bahawalpur</h3>
+          <p>Ice cream is a delightful loved frozen treat that has been bringing joy to people</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://source.unsplash.com/1600x600/?icecream,cold" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h3 style="color: pink;">We serve love with Ice Creams</h3>
+          <p>This delectable dessert is made by churning a mixture of milk or cream.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://source.unsplash.com/1600x600/?icecream" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h3 style="color: pink;">Inaugurated by Kainat Khan</h3>
+          <p>The beauty of ice cream lies in its versatility.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+ 
+ {% comment %} Thumbnails start here {% endcomment %}
+<div class="container my-4">
+  <h1 class="my-5 text-center"> Select from the Range of Ice creams</h1>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="col md-4">
+        <div class="card shadow-sm">
+          <img src="{% static 'icePics/ice 1.jpg' %}" class="d-block w-100" alt="...">
+          <div class="card-body">
+            <h4>Raspberry éclair</h4>
+            <p class="card-text">The éclair is filled with a red substance, which is likely raspberry jam or filling, a popular flavor for éclairs, a popular flavor for éclairs ice creams .</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group" style="margin-top: 10px; text-align: center;">
+                <button type="button" class="btn btn-sm btn-outline-secondary" style="margin-right: 5px; background-color: #f0f0f0; color: #333; border: 1px solid #ccc; border-radius: 5px;">Price: 300 Rs</button>
+                <a href="{% url 'contact' %}">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" style="background-color: #007bff; color: #fff;">Place Order: 1</button>
+                </a>
+            </div>
+            
+            
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col md-4">
+        <div class="card shadow-sm">
+          <img src="{% static 'icePics/ice 2.jpg' %}" class="d-block w-100" alt="...">
+          <div class="card-body">
+            <h4>Choco-Nutty Surprise</h4>
+            <p class="card-text">Indulge in a flavor adventure with the Choco-Nutty Surprise! This tantalizing treat starts with a base of rich, velvety chocolate ice cream.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group" style="margin-top: 10px; text-align: center;">
+                <button type="button" class="btn btn-sm btn-outline-secondary" style="margin-right: 5px; background-color: #f0f0f0; color: #333; border: 1px solid #ccc; border-radius: 5px;">Price: 150 Rs</button>
+                <a href="{% url 'contact' %}">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" style="background-color: #007bff; color: #fff;">Place Order: 2</button>
+                </a>
+            </div>
+            
+            
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col md-4">
+        <div class="card shadow-sm">
+          <img src="{% static 'icePics/ice 3.jpg' %}" class="d-block w-100" alt="...">
+          <div class="card-body">
+            <h4>Strawberry Swirl Sundae</h4>
+            <p class="card-text">Savor the delightful Strawberry Swirl Sundae – a perfect harmony of luscious strawberry swirls atop creamy vanilla ice cream, crowned with a medley of fresh berries.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group" style="margin-top: 10px; text-align: center;">
+                <button type="button" class="btn btn-sm btn-outline-secondary" style="margin-right: 5px; background-color: #f0f0f0; color: #333; border: 1px solid #ccc; border-radius: 5px;">Price: 350 Rs</button>
+                <a href="{% url 'contact' %}">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" style="background-color: #007bff; color: #fff;">Place Order: 3</button>
+                </a>
+            </div>
+            
+            
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col md-4">
+        <div class="card shadow-sm">
+          <img src="{% static 'icePics/ice 4.jpg' %}" class="d-block w-100" alt="...">
+          <div class="card-body">
+            <h4>Ocean Dream</h4>
+            <p class="card-text">Blueberry swirls dance across creamy white ice cream, creating a delightful ocean scene topped with a cherry red beacon.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group" style="margin-top: 10px; text-align: center;">
+                <button type="button" class="btn btn-sm btn-outline-secondary" style="margin-right: 5px; background-color: #f0f0f0; color: #333; border: 1px solid #ccc; border-radius: 5px;">Price: 350 Rs</button>
+                <a href="{% url 'contact' %}">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" style="background-color: #007bff; color: #fff;">Place Order: 4</button>
+                </a>
+            </div>
+            
+            
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col md-4">
+        <div class="card shadow-sm">
+          <img src="{% static 'icePics/ice 5.jpg' %}" class="d-block w-100" alt="...">
+          <div class="card-body">
+            <h4>Choco-Mint Avalanche</h4>
+            <p class="card-text">Mint ice cream erupts with dark chocolate chunks, a refreshing blizzard in every bite , creamy mint surges with a chocolate chip.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group" style="margin-top: 10px; text-align: center;">
+                <button type="button" class="btn btn-sm btn-outline-secondary" style="margin-right: 5px; background-color: #f0f0f0; color: #333; border: 1px solid #ccc; border-radius: 5px;">Price: 250 Rs</button>
+                <a href="{% url 'contact' %}">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" style="background-color: #007bff; color: #fff;">Place Order: 5</button>
+                </a>
+            </div>
+            
+            
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col md-4">
+        <div class="card shadow-sm">
+          <img src="{% static 'icePics/ice 6.jpg' %}" class="d-block w-100" alt="...">
+          <div class="card-body">
+            <h4>Caramel Apple Crumble</h4>
+            <p class="card-text">Vanilla kisses sweet caramel swirls, crunchy apple bursts,crisp apple chunks and crumbly comfort.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group" style="margin-top: 10px; text-align: center;">
+                <button type="button" class="btn btn-sm btn-outline-secondary" style="margin-right: 5px; background-color: #f0f0f0; color: #333; border: 1px solid #ccc; border-radius: 5px;">Price: 400 Rs</button>
+                <a href="{% url 'contact' %}">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" style="background-color: #007bff; color: #fff;">Place Order: 6</button>
+                </a>
+            </div>
+            
+            
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col md-4">
+        <div class="card shadow-sm">
+          <img src="{% static 'icePics/ice 9.jpg' %}" class="d-block w-100" alt="...">
+          <div class="card-body">
+            <h4>A box of macarons</h4>
+            <p class="card-text">
+              A delightful assortment of macarons awaits in this box – a fusion of vibrant colors and diverse flavors. Each bite unveils a perfect balance of sweetness and sophistication, a true indulgence.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group" style="margin-top: 10px; text-align: center;">
+                <button type="button" class="btn btn-sm btn-outline-secondary" style="margin-right: 5px; background-color: #f0f0f0; color: #333; border: 1px solid #ccc; border-radius: 5px;">Price: 800 Rs</button>
+                <a href="{% url 'contact' %}">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" style="background-color: #007bff; color: #fff;">Place Order: 7</button>
+                </a>
+            </div>
+            
+            
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col md-4">
+        <div class="card shadow-sm">
+          <img src="{% static 'icePics/ice 10.jpg' %}" class="d-block w-100" alt="...">
+          <div class="card-body">
+            <h4>Pistachio ice cream</h4>
+            <p class="card-text">Savor the rich, nutty goodness of pistachio ice cream. A luscious blend of creamy textures and distinctive pistachio flavor, each scoop promises a delightful treat that captivates the taste buds.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group" style="margin-top: 10px; text-align: center;">
+                <button type="button" class="btn btn-sm btn-outline-secondary" style="margin-right: 5px; background-color: #f0f0f0; color: #333; border: 1px solid #ccc; border-radius: 5px;">Price: 300 Rs</button>
+                <a href="{% url 'contact' %}">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" style="background-color: #007bff; color: #fff;">Place Order: 8</button>
+                </a>
+            </div>
+            
+            
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col md-4">
+        <div class="card shadow-sm">
+          <img src="{% static 'icePics/ice 11.jpg' %}" class="d-block w-100" alt="...">
+          <div class="card-body">
+            <h4>chocolate chip cookies</h4>
+            <p class="card-text">Enjoy the classic charm of chocolate chip cookies. Golden brown and irresistibly chewy, these cookies boast a perfect balance of sweet chocolate morsels and buttery dough for a timeless treat.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group" style="margin-top: 10px; text-align: center;">
+                <button type="button" class="btn btn-sm btn-outline-secondary" style="margin-right: 5px; background-color: #f0f0f0; color: #333; border: 1px solid #ccc; border-radius: 5px;">Price: 500 Rs</button>
+                <a href="{% url 'contact' %}">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" style="background-color: #007bff; color: #fff;">Place Order: 9</button>
+                </a>
+            </div>
+            
+            
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col md-4">
+        <div class="card shadow-sm">
+          <img src="{% static 'icePics/ice 12.jpg' %}" class="d-block w-100" alt="...">
+          <div class="card-body">
+            <h4>Butter pancake</h4>
+            <p class="card-text">Delight in the simplicity of butter pancakes, golden and fluffy. Each bite reveals a melt-in-your-mouth experience, as the rich buttery goodness complements the light and airy texture of these delectable pancakes.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group" style="margin-top: 10px; text-align: center;">
+                <button type="button" class="btn btn-sm btn-outline-secondary" style="margin-right: 5px; background-color: #f0f0f0; color: #333; border: 1px solid #ccc; border-radius: 5px;">Price: 550 Rs</button>
+                <a href="{% url 'contact' %}">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" style="background-color: #007bff; color: #fff;">Place Order: 10</button>
+                </a>
+            </div>
+            
+            
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col md-4">
+        <div class="card shadow-sm">
+          <img src="{% static 'icePics/ice 13.jpg' %}" class="d-block w-100" alt="...">
+          <div class="card-body">
+            <h4>Cheese Cake</h4>
+            <p class="card-text">Delight in the simplicity of butter pancakes, golden and fluffy. Each bite reveals a melt-in-your-mouth experience, as the rich buttery goodness complements the light and airy texture of these delectable pancakes.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group" style="margin-top: 10px; text-align: center;">
+                <button type="button" class="btn btn-sm btn-outline-secondary" style="margin-right: 5px; background-color: #f0f0f0; color: #333; border: 1px solid #ccc; border-radius: 5px;">Price: 1500 Rs</button>
+                <a href="{% url 'contact' %}">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" style="background-color: #007bff; color: #fff;">Place Order: 11</button>
+                </a>
+            </div>
+            
+            
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col md-4">
+        <div class="card shadow-sm">
+          <img src="{% static 'icePics/ice 14.jpg' %}" class="d-block w-100" alt="...">
+          <div class="card-body">
+            <h4>Rosemary olive oil cake</h4>
+            <p class="card-text">Experience the exquisite flavor of rosemary olive oil cake. Moist and aromatic, this unique dessert intertwines the earthiness of rosemary with the fruity notes of olive oil for a sophisticated treat.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group" style="margin-top: 10px; text-align: center;">
+                <button type="button" class="btn btn-sm btn-outline-secondary" style="margin-right: 5px; background-color: #f0f0f0; color: #333; border: 1px solid #ccc; border-radius: 5px;">Price: 1600 Rs</button>
+                <a href="{% url 'contact' %}">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" style="background-color: #007bff; color: #fff;">Place Order: 12</button>
+                </a>
+            </div>
+            
+            
+            </div>
+          </div>
+        </div>
+      </div>
+      {% comment %} <div class="col md-4">
+        <div class="card shadow-sm">
+          <img src="{% static 'icePics/ice 16.jpg' %}" class="d-block w-100" alt="...">
+          <div class="card-body">
+            <h4>Golden Pine Apple</h4>
+            <p class="card-text"><b>Bite into the tropical sweetness of pineapple<b> , a juicy and refreshing delight. Its vibrant golden flesh brings a burst of sunshine, creating a perfect balance of tanginess and natural sweetness.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group" style="margin-top: 10px; text-align: center;">
+                <button type="button" class="btn btn-sm btn-outline-secondary" style="margin-right: 5px; background-color: #f0f0f0; color: #333; border: 1px solid #ccc; border-radius: 5px;">Price: 1600000000000 Rs</button>
+                <a href="{% url 'contact' %}">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" style="background-color: #007bff; color: #fff;">Place Order: 13</button>
+                </a>
+            </div>
+            
+            
+            </div>
+          </div>
+        </div>
+      </div> {% endcomment %}
+
+
+     
+    </div>
+  </div>
+ 
+</div>
+     {% comment %} start footer  {% endcomment %}
+     <div class="container-fluid p-0 bg-dark text-white" style="background-color: #417690;">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-0 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+          <span class=" text-white">© 2024 A-S Ice creams, Inc</span>
+        </div> 
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex px-5">
+          <li class="ms-3 text-white px-3"><a href="https://www.instagram.com/kainatnotkaynaat?igsh=MTlpeGRjMzl0aXRmdQ%3D%3D" target="_blank" style="color: white;"><i class="fab fa-2x fa-instagram" style="color: white;"></i></a></li>
+          <li class="ms-3 text-white px-3"><a href="https://www.snapchat.com/add/kaainaatkhaan?invite_id=05m3rxTq&locale=en_PK&share_id=bVFFj3I9Tj2s7toJ_jVXFw&sid=23de421a202548bc82672658630360d8" target="_blank" style="color: white;"><i class="fab fa-2x fa-snapchat" style="color: white;"></i></a></li>
+          <li class="ms-3 text-white px-3"><a href="https://www.facebook.com/profile.php?id=100008446572106&mibextid=9R9pXO" target="_blank" style="color: white;"><i class="fab fa-2x fa-facebook" style="color: white;"></i></a></li>
+      </ul>
+      </footer>
+    </div> 
+  
+{% endblock body %}
+
+
+
